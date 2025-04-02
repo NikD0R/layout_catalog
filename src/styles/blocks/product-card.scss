@@ -1,11 +1,11 @@
 .product-card {
   box-sizing: border-box;
-  height: 406px;
   max-width: 200px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   background-color: #fff;
   padding: 32px 16px 16px;
+  transition: all 0.3s;
 
   &__img {
     display: block;
@@ -16,6 +16,7 @@
 
   &__title {
     font-weight: 500;
+    font-size: 12px;
     margin: 0 0 4px;
   }
 
@@ -29,7 +30,7 @@
   &__rating {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     margin-bottom: 24px;
   }
 
@@ -74,6 +75,15 @@
       background-color: transparent;
       border: 1px solid $accent-color;
       color: $accent-color;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.5);
+    transition-duration: 0.3s;
+
+    .product-card__title {
+      color: $title-hover;
     }
   }
 }
